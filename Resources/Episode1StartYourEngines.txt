@@ -22,7 +22,7 @@ inspect-asset: "ffprobe ASSET"
 
 This prepares YouTube videos for 1080p.
 
-prepare-for-youtube: "ffmpeg -i iPhone11_4K-recorder_59.940HDR10.mov \
+prepare-for-youtube: "ffmpeg -i ASSET \
     YouTube.mp4 \
     -b:a 384k -c:a aac \
     -b:v 8M -c:v libx264 \
