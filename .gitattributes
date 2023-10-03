@@ -1,0 +1,6 @@
+*.md text
+*.txt text
+*.pdf binary
+*.jpeg binary
+*.png binary
+*.jpg binary

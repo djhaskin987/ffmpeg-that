@@ -1,0 +1,29 @@
+Prepare an Asset for YouTube
+----------------------------
+
+
+Links
+=====
+
+Brew: https://brew.sh
+
+Martin Riedl's FFmpeg Build Server: https://ffmpeg.martin-riedl.de/
+
+YouTube Upload Requirements: https://support.google.com/youtube/answer/1722171?hl=en#zippy=%2Ccontainer-mp%2Caudio-codec-aac-lc
+
+Sample Video: https://drive.google.com/file/d/1Ic9DZXMSo07EJMqCFaQRKSSrSw6y1mYv/view?pli=1
+
+Recipes
+=======
+
+This helps you see what is in an asset.
+
+inspect-asset: "ffprobe ASSET"
+
+This prepares YouTube videos for 1080p.
+
+prepare-for-youtube: "ffmpeg -i iPhone11_4K-recorder_59.940HDR10.mov \
+    YouTube.mp4 \
+    -b:a 384k -c:a aac \
+    -b:v 8M -c:v libx264 \
+    -movflags +faststart -pix_fmt yuv420p"
